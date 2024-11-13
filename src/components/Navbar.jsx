@@ -12,12 +12,12 @@ function Navbar() {
             {/* Placeholder Camera Icon */}
             <span className="text-blue-600 font-bold text-lg">📷</span>
           </div>
-          <h1 className="text-2xl font-semibold cursor-pointer hover:underline">Gallery</h1>
+          <h1 className="text-2xl font-semibold ">Gallery</h1>
         </div>
 
         {/* Right Side: Gallery Icon */}
         <div className="flex items-center">
-          <FaImages className="text-2xl cursor-pointer hover:text-blue-300 transition duration-200" title="View Gallery" />
+          <FaImages className="text-2xl hover:text-blue-300 transition duration-200" title="View Gallery" />
         </div>
       </div>
     </nav>

@@ -14,12 +14,12 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className=" ">
       {/* Navbar */}
       <Navbar />
 
       {/* Main Content */}
-      <div className="flex flex-col items-center justify-center min-h-screen pt-20">
+      <div className="flex flex-col items-center justify-center pt-5">
         {isCameraOpen ? (
           <Camera onCapture={handleCapture} onClose={() => setIsCameraOpen(false)} />
         ) : (
