@@ -7,8 +7,8 @@ function Camera({ onCapture, onClose }) {
   const [facingMode, setFacingMode] = useState("user");
   const [isMobile, setIsMobile] = useState(false);
   const [zoom, setZoom] = useState(1); // Zoom level
-  const [aspectRatio, setAspectRatio] = useState("16:9"); // Aspect ratio
-  const previewRef = useRef(null); // Reference for capturing the preview
+  const [aspectRatio, setAspectRatio] = useState("16:9");
+  const previewRef = useRef(null);
 
   useEffect(() => {
     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -37,13 +37,13 @@ function Camera({ onCapture, onClose }) {
     };
   };
 
-  // Function to handle screenshot capture with zoom effect
+
   const capturePhoto = () => {
     if (previewRef.current) {
- 
+
       html2canvas(previewRef.current, {
-        scale: 1, // No scaling, capture the original zoomed frame
-        logging: false, 
+        scale: 1,
+        logging: false,
         x: (previewRef.current.clientWidth - previewRef.current.clientWidth / zoom) / 2, // Horizontal crop to zoom
         y: (previewRef.current.clientHeight - previewRef.current.clientHeight / zoom) / 2, // Vertical crop to zoom
         width: previewRef.current.clientWidth / zoom, // Capture the zoomed area
@@ -72,7 +72,7 @@ function Camera({ onCapture, onClose }) {
 
   return (
     <div className="flex flex-col items-center bg-white p-5 rounded-lg shadow-lg fixed inset-x-4 top-20 max-h-screen overflow-auto z-50">
-      {/* Camera Preview with Aspect Ratio and Zoom */}
+      {/* Camera Preview */}
       <div ref={previewRef} className={`relative overflow-hidden ${getAspectRatioStyle()} w-full max-w-md`}>
         <Webcam
           audio={false}
