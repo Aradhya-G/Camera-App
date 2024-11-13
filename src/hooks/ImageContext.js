@@ -1,9 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
-
-// Create Context
 export const ImageContext = createContext();
 
-// Provider Component
 export const ImageProvider = ({ children }) => {
   const [galleryImages, setGalleryImages] = useState([]);
 

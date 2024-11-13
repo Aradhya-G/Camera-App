@@ -10,15 +10,12 @@ function App() {
 
   const handleCapture = (image) => {
     addImage(image);  // Add captured image to context
-    setIsCameraOpen(false);  // Close camera after capturing
+    setIsCameraOpen(false); 
   };
 
   return (
     <div className=" ">
-      {/* Navbar */}
       <Navbar />
-
-      {/* Main Content */}
       <div className="flex flex-col items-center justify-center pt-5">
         {isCameraOpen ? (
           <Camera onCapture={handleCapture} onClose={() => setIsCameraOpen(false)} />
